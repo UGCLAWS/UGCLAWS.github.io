@@ -26,7 +26,7 @@
             z-index: -1;
             overflow: hidden;
         }
-        .background video, .background img {
+        .background video {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -37,7 +37,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;  /* Уменьшили промежуток между логотипом и текстом */
+            gap: 10px;
             margin: 40px 0;
         }
         header img {
@@ -48,7 +48,7 @@
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
-            color: white;
+            color: #6A0DAD; /* Темно-фиолетовый цвет */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             margin: 0;
         }
@@ -58,16 +58,16 @@
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.8);
+            background: #808080; /* Серый фон */
             color: black;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #ccc; /* Светло-серая граница */
             text-align: left;
             padding: 8px;
         }
         th {
-            background-color: rgba(242, 242, 242, 0.9);
+            background-color: #B0B0B0; /* Серый фон для заголовков */
         }
         img {
             width: 50px;
@@ -109,30 +109,6 @@
             font-size: 18px;
             font-weight: bold;
             margin-top: 10px;
-        }
-
-        /* Снег */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: white;
-            opacity: 0.8;
-            user-select: none;
-            pointer-events: none;
-            animation: fall linear infinite, sway linear infinite;
-        }
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-        @keyframes sway {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(var(--end-x, 0));
-            }
         }
     </style>
 </head>
@@ -253,28 +229,5 @@
             </div>
         </section>
     </div>
-
-    <!-- Снег -->
-    <script>
-        // Функция для создания снежинки
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.textContent = '❄';
-            snowflake.className = 'snowflake';
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
-            snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
-            snowflake.style.setProperty('--end-x', `${Math.random() * 200 - 100}px`);
-            document.body.appendChild(snowflake);
-
-            // Удаляем снежинку после 10 секунд
-            setTimeout(() => {
-                snowflake.remove();
-            }, 10000);
-        }
-
-        // Создаем снежинки каждые 300 мс
-        setInterval(createSnowflake, 300);
-    </script>
 </body>
 </html>
