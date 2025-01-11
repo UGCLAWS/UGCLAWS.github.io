@@ -1,3 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGCLAWS CLAN</title>
+    <style>
+        /* Общие стили */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Фон */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Заголовок */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 40px 0;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Анимация текста "UGCLAWS" (светлофиолетовый -> темнофиолетовый) */
+        @keyframes colorChangeUGCLAWS {
+            0% {
+                color: rgb(147, 112, 219); /* Светлофиолетовый */
+            }
+            100% {
+                color: rgb(75, 0, 130); /* Темнофиолетовый */
+            }
+        }
+
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            color: rgb(147, 112, 219); /* Начальный цвет */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            animation: colorChangeUGCLAWS 3s infinite alternate; /* Переливание цвета */
+        }
+
+        /* Анимация текста "PhotoGallery" (серо-белый -> темно-серый) */
+        @keyframes colorChangePhotoGallery {
+            0% {
+                color: rgb(211, 211, 211); /* Светло-серый */
+            }
+            100% {
+                color: rgb(169, 169, 169); /* Темно-серый */
+            }
+        }
+
+        .achievements h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: colorChangePhotoGallery 5s infinite alternate; /* Переливание цвета */
+        }
+
+        /* Таблица */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #808080; /* Серый фон */
+            color: black;
+        }
+        th, td {
+            border: 1px solid #ccc; /* Светло-серая граница */
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #B0B0B0; /* Серый фон для заголовков */
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+
+        /* Разделитель */
+        .divider {
+            margin: 50px auto;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+        }
+
+        /* Достижения */
+        .achievements {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .achievement {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .achievement img {
+            width: 300px;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .achievement p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Фон -->
+    <div class="background">
+        <video autoplay muted loop>
+            <source src="" type="video/mp4">
+            <img src="" alt="Фон">
+        </video>
+    </div>
+
     <!-- Содержимое -->
     <div class="content">
         <!-- Заголовок -->
@@ -63,4 +211,5 @@
 
         <!-- ФотоГалерея -->
         <section class="achievements">
-            <h2>PhotoGallery</h2>
+            <h2>PhotoGallery (soon)</h2>
+         
